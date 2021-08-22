@@ -59,55 +59,20 @@
     <br />
     <p1>猜猜是哪一个：<br /><a href="part1.html">点我</a><br /><a href="part3.html">点我</a><br /><a href="part2.html">点我</a></p1>
     <br />
-    <p1>↓</p1>
+    <p1>或者你可以等一会儿</p1>
     <br />
+    <p1>大概10秒吧</p1>
     <br />
+    <p1 id="p1"></p1>
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <p1>被我骗到了吧</p1>
-    <br />
-    <p1>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p1>
-    <br />
-    <p1>在这里：<a href="part4.html">点我</a></p1>
+    <p1 id="p2"></p1>
+    <script>
+        function sleep(time) {
+            return new Promise((resolve) => setTimeout(resolve, time));
+        }
+        sleep(10000).then(() => {
+            document.getElementById("p1").innerHTML = "哒哒~在这里！"
+            document.getElementById("p2").innerHTML = "<a href=\"part4.html\">点我</a>"
+        })
+    </script>
 </body>
