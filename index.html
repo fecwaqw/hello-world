@@ -1,0 +1,46 @@
+<head>
+    <title>目录</title>
+</head>
+
+<body>
+    <script>
+        function tool1() {
+            document.getElementById("p1").innerHTML = "<button onclick=\"tool2()\">工具▲</button>"
+            document.getElementById("p2").innerHTML = " "
+            document.getElementById("p3").innerHTML = " "
+        }
+        function tool2() {
+            document.getElementById("p1").innerHTML = "<button onclick=\"tool1()\">工具▼</button>"
+            document.getElementById("p2").innerHTML = "<a href=\"https://csacademy.com/app/graph_editor/\">图论画图编辑器</a>"
+            document.getElementById("p3").innerHTML = "<a href=\"log2.html\">log2计算器</a>"
+        }
+        function game1() {
+            document.getElementById("p4").innerHTML = "<button onclick=\"game2()\">游戏▲</button>"
+            document.getElementById("p5").innerHTML = " "
+            document.getElementById("p6").innerHTML = " "
+            document.getElementById("p7").innerHTML = " "
+        }
+        function game2() {
+            document.getElementById("p4").innerHTML = "<button onclick=\"game1()\">游戏▼</button>"
+            document.getElementById("p5").innerHTML = "<a href=\"https://generals.io/\">generals</a>"
+            document.getElementById("p6").innerHTML = "<a href=\"七夕节礼物/index.html\">七夕节礼物</a>"
+            document.getElementById("p7").innerHTML = "<a href=\"http://flash.7k7k.com/cms/cms10/20191112/1747326568/1/gameIndex.html\">森林冰火人</a>"
+        }
+
+    </script>
+    <h1>fecwaqw的github</h1>
+    <h3>目录：</h3>
+    <p1 id="p1"><button onclick="tool2()">工具▲</button></p1>
+    <br>
+    <p1 id="p2"></p1>
+    <br>
+    <p1 id="p3"></p1>
+    <br>
+    <p1 id="p4"><button onclick="game2()">游戏▲</button></p1>
+    <br>
+    <p1 id="p5"></p1>
+    <br>
+    <p1 id="p6"></p1>
+    <br>
+    <p1 id="p7"></p1>
+</body>
