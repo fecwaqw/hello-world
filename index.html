@@ -35,6 +35,14 @@
             document.getElementById("p8").innerHTML = make_link("扫雷", "http://minesweeper.cn/")
             document.getElementById("p9").innerHTML = make_link("minecraft clasic", "https://classic.minecraft.net")
         }
+        function document2() {
+            document.getElementById("p4").innerHTML = "<button onclick=\"document1()\">文档▼</button><br>"
+            document.getElementById("p12").innerHTML = make_link("超炮1.1", "超炮/1.1/index.html")         
+        }
+        function document1() {
+            document.getElementById("p4").innerHTML = "<button onclick=\"document2()\">文档▲</button><br>"
+            document.getElementById("p12").innerHTML = " "      
+        }
     </script>
     <h1>fecwaqw的github</h1>
     <h3>目录：</h3>
@@ -48,6 +56,8 @@
     <p1 id="p7"> </p1>
     <p1 id="p8"> </p1>
     <p1 id="p9"> </p1>
+    <p1 id="p11"><button onclick="document2()">文档▲</button><br></p1>
+    <p1 id="p12"> </p1>
     <h3>不可用于商业用途</p3>
     <br>
     <h5>应该也没人会把它用于商业用途吧</p5>
