@@ -1,64 +1,19 @@
 <head>
-    <title>目录</title>
+    <title>底数为2的log计算器</title>
 </head>
 
 <body>
     <script>
-        function make_link(name, url) {
-            return "<a href=\"" + url + "\">" + name + "</a><br>"
-        }
-        function tool1() {
-            document.getElementById("p1").innerHTML = "<button onclick=\"tool2()\">工具▲</button><br>"
-            document.getElementById("p2").innerHTML = " "
-            document.getElementById("p3").innerHTML = " "
-            document.getElementById("p10").innerHTML = " "
-        }
-        function tool2() {
-            document.getElementById("p1").innerHTML = "<button onclick=\"tool1()\">工具▼</button><br>"
-            document.getElementById("p2").innerHTML = make_link("图论画图编辑器", "https://csacademy.com/app/graph_editor/")
-            document.getElementById("p3").innerHTML = make_link("log2计算器", "log2.html")
-            document.getElementById("p10").innerHTML = make_link("OI笔记", "oi_notes.html")
-        }
-        function game1() {
-            document.getElementById("p4").innerHTML = "<button onclick=\"game2()\">游戏▲</button><br>"
-            document.getElementById("p5").innerHTML = " "
-            document.getElementById("p6").innerHTML = " "
-            document.getElementById("p7").innerHTML = " "
-            document.getElementById("p8").innerHTML = " "
-            document.getElementById("p9").innerHTML = " "
-        }
-        function game2() {
-            document.getElementById("p4").innerHTML = "<button onclick=\"game1()\">游戏▼</button><br>"
-            document.getElementById("p5").innerHTML = make_link("generals", "https://generals.io/")
-            document.getElementById("p6").innerHTML = make_link("七夕节礼物", "七夕节礼物/index.html")
-            document.getElementById("p7").innerHTML = make_link("森林冰火人", "http://flash.7k7k.com/cms/cms10/20191112/1747326568/1/gameIndex.html")
-            document.getElementById("p8").innerHTML = make_link("扫雷", "http://minesweeper.cn/")
-            document.getElementById("p9").innerHTML = make_link("minecraft clasic", "https://classic.minecraft.net")
-        }
-        function document2() {
-            document.getElementById("p4").innerHTML = "<button onclick=\"document1()\">文档▼</button><br>"
-            document.getElementById("p12").innerHTML = make_link("超炮1.1", "超炮/1.1/index.html")         
-        }
-        function document1() {
-            document.getElementById("p4").innerHTML = "<button onclick=\"document2()\">文档▲</button><br>"
-            document.getElementById("p12").innerHTML = " "      
+        function calc() {
+            num = input.number.value
+            log2_num = Math.log2(num)
+            document.getElementById("answer").innerHTML = "log(2, " + num + ") = " + log2_num
         }
     </script>
-    <h1>fecwaqw的github</h1>
-    <h3>目录：</h3>
-    <p1 id="p1"><button onclick="tool2()">工具▲</button><br></p1>
-    <p1 id="p2"> </p1>
-    <p1 id="p3"> </p1>
-    <p1 id="p10"> </p1>
-    <p1 id="p4"><button onclick="game2()">游戏▲</button><br></p1>
-    <p1 id="p5"> </p1>
-    <p1 id="p6"> </p1>
-    <p1 id="p7"> </p1>
-    <p1 id="p8"> </p1>
-    <p1 id="p9"> </p1>
-    <p1 id="p11"><button onclick="document2()">文档▲</button><br></p1>
-    <p1 id="p12"> </p1>
-    <h3>不可用于商业用途</p3>
-    <br>
-    <h5>应该也没人会把它用于商业用途吧</p5>
+    <p1>底数为2的log计算器</p1>
+    <form name="input" action="javascript:calc()">
+        <p1>数值：</p1><input type="text" name="num" id="number"><br>
+        <input type="submit" value="计算">
+    </form>
+    <p1 id="answer"></p1>
 </body>
