@@ -1,19 +1,46 @@
 <head>
-    <title>底数为2的log计算器</title>
+    <title>目录</title>
 </head>
 
 <body>
     <script>
-        function calc() {
-            num = input.number.value
-            log2_num = Math.log2(num)
-            document.getElementById("answer").innerHTML = "log(2, " + num + ") = " + log2_num
+        function make_link(name, url) {
+            return "<a href=\"" + url + "\">" + name + "</a><br>"
+        }
+        function tool1() {
+            document.getElementById("tool_button").innerHTML = "<button onclick=\"tool2()\">工具▲</button><br>"
+            document.getElementById("tool").innerHTML = " "
+        }
+        function tool2() {
+            document.getElementById("tool_button").innerHTML = "<button onclick=\"tool1()\">工具▼</button><br>"
+            html = ""
+            html += make_link("图论画图编辑器", "https://csacademy.com/app/graph_editor/")
+            html += make_link("log2计算器", "log2.html")
+            html += make_link("OI笔记", "oi_notes.html")
+            document.getElementById("tool").innerHTML = html
+        }
+        function game1() {
+            document.getElementById("game_button").innerHTML = "<button onclick=\"game2()\">游戏▲</button><br>"
+            document.getElementById("game").innerHTML = " "
+        }
+        function game2() {
+            document.getElementById("game_button").innerHTML = "<button onclick=\"game1()\">游戏▼</button><br>"
+            html = ""
+            html += make_link("generals", "https://generals.io/")
+            html += make_link("七夕节礼物", "七夕节礼物/index.html")
+            html += make_link("森林冰火人", "http://flash.7k7k.com/cms/cms10/20191112/1747326568/1/gameIndex.html")
+            html += make_link("扫雷", "http://minesweeper.cn/")
+            html += make_link("minecraft clasic", "https://classic.minecraft.net")
+            document.getElementById("game").innerHTML = html
         }
     </script>
-    <p1>底数为2的log计算器</p1>
-    <form name="input" action="javascript:calc()">
-        <p1>数值：</p1><input type="text" name="num" id="number"><br>
-        <input type="submit" value="计算">
-    </form>
-    <p1 id="answer"></p1>
+    <h1>fecwaqw的github</h1>
+    <h3>目录：</h3>
+    <p1 id="tool_button"><button onclick="tool2()">工具▲</button><br></p1>
+    <p1 id="tool"> </p1>
+    <p1 id="game_button"><button onclick="game2()">游戏▲</button><br></p1>
+    <p1 id="game"> </p1>
+    <h3>不可用于商业用途</p3>
+        <br>
+        <h5>应该也没人会把它用于商业用途吧</p5>
 </body>
