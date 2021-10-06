@@ -3,6 +3,12 @@
 </head>
 
 <body>
+    <p1>底数为2的log计算器</p1>
+    <form name="input" action="javascript:calc()">
+        <p1>数值：</p1><input type="text" name="num" id="number"><br>
+        <input type="submit" value="计算">
+    </form>
+    <p1 id="answer"></p1>
     <script>
         function calc() {
             num = input.number.value
@@ -10,10 +16,4 @@
             document.getElementById("answer").innerHTML = "log(2, " + num + ") = " + log2_num
         }
     </script>
-    <p1>底数为2的log计算器</p1>
-    <form name="input" action="javascript:calc()">
-        <p1>数值：</p1><input type="text" name="num" id="number"><br>
-        <input type="submit" value="计算">
-    </form>
-    <p1 id="answer"></p1>
 </body>
