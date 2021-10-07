@@ -1,0 +1,21 @@
+<head>
+    <title>壁纸收藏！</title>
+</head>
+
+<body>
+    <h1>fecwaqw的壁纸收藏！</h1>
+    <p1>若有1920x1080的壁纸，可以捐赠一下吗</p1><br>
+    <p1>发到fecwaqw@126.com，屑屑</p1><br>
+    <p1 id="url">nothing.........</p1>
+    <script>
+        var img_list = ["warma爆炸电台第八期.png", "秋巫女.png", "6BC4E2AD0844D6BBD6565AB5DB4E2000.png", "af5ffafe6e9f408a97e7a37bf80f3755.png"]
+        function get_html(name) {
+            return "<img src=\"img/" + name + "\" height=\"270\" width=\"480\"><br>"
+        }
+        html = ""
+        for (var i = 0; i < img_list.length; i += 1) {
+            html += get_html(img_list[i])
+        }
+        document.getElementById("url").innerHTML = html
+    </script>
+</body>
