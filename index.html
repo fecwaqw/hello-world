@@ -9,6 +9,8 @@
     <p1 id="tool"> </p1>
     <p1 id="game_button"><button onclick="game2()">游戏▲</button><br></p1>
     <p1 id="game"> </p1>
+    <p1 id="document_button"><button onclick="document2()">游戏▲</button><br></p1>
+    <p1 id="document"> </p1>
     <h3>不可用于商业用途</h3><br>
     <h5>应该也没人会把它用于商业用途吧</h5>
     <script>
@@ -44,6 +46,16 @@
             html += make_link("minecraft clasic", "https://classic.minecraft.net")
             html += make_link("ev", "https://ev.io")
             document.getElementById("game").innerHTML = html
+        }
+        function document1() {
+            document.getElementById("document_button").innerHTML = "<button onclick=\"document2()\">文档▲</button><br>"
+            document.getElementById("document").innerHTML = " "
+        }
+        function document2() {
+            document.getElementById("document_button").innerHTML = "<button onclick=\"document1()\">文档▼</button><br>"
+            html = ""
+            html += make_link("作文", "作文/index.html")
+            document.getElementById("document").innerHTML = html
         }
     </script>
 </body>
