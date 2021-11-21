@@ -10,8 +10,8 @@
     }
     html = ''
     for (var i = 0; i < document_list.length; i += 1){
-      html += make_link(document_list[i] + '.docx', 'document/' + doucument_list[i] + '.docx')
-      html += make_link(document_list[i] + '.pptx', 'document/' + doucument_list[i] + '.pptx')
+      html += make_link(document_list[i] + '.docx', 'document/' + document_list[i] + '.docx')
+      html += make_link(document_list[i] + '.pptx', 'document/' + document_list[i] + '.pptx')
     }
     document.getElementById("document").innerHTML = html
   </script>
