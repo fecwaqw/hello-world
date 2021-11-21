@@ -1,0 +1,18 @@
+<head>
+  <title>fecwaqw的作文</title>
+ </head>
+<body>
+  <p1 id=document>none</p1>
+  <script>
+    document_list = ['春天的美景']
+    function make_link(name, url) {
+        return "<a href=\"" + url + "\">" + name + "</a><br>"
+    }
+    html = ''
+    for (var i = 0; i < document_list.length; i += 1){
+      html += make_link(document_list[i] + '.docx', 'document/' + doucument_list[i] + '.docx')
+      html += make_link(document_list[i] + '.pptx', 'document/' + doucument_list[i] + '.pptx')
+    }
+    document.getElementById("document").innerHTML = html
+  </script>
+</body>
