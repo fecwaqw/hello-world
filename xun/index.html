@@ -1,0 +1,155 @@
+<html>
+
+<head>
+	<title>中国逊人类协会</title>
+	<style>
+		#title {
+			text-align: center;
+			font-size: 50px;
+			color: rgb(255, 115, 248);
+		}
+
+		#sign {
+			position: absolute;
+			left: 100px;
+			top: 100px;
+			font-size: 30px;
+		}
+
+		#search {
+			position: absolute;
+			left: 700px;
+			top: 150px;
+			font-size: 30px;
+		}
+
+		#searchButton {
+			position: absolute;
+			left: 1073px;
+			top: 150px;
+			font-size: 26px;
+			width: 130px;
+			background-color: #4e6ef2;
+			color: white;
+		}
+
+		#mouse {
+			position: absolute;
+			left: 1190px;
+			top: 160px;
+		}
+
+		#music {
+			position: absolute;
+			left: 100px;
+			top: 500px;
+			height: 100px;
+			width: 100px;
+			background-color: red;
+			color: white;
+			font-size: 20px;
+		}
+
+		#news {
+			position: absolute;
+			left: 200px;
+			top: 500px;
+			height: 100px;
+			width: 100px;
+			background-color: orange;
+			color: white;
+			font-size: 20px;
+		}
+
+		#game {
+			position: absolute;
+			left: 300px;
+			top: 500px;
+			height: 100px;
+			width: 100px;
+			background-color: yellow;
+			color: white;
+			font-size: 20px;
+		}
+
+		#mcLuncher {
+			position: absolute;
+			left: 400px;
+			top: 500px;
+			height: 100px;
+			width: 100px;
+			background-color: green;
+			color: white;
+			font-size: 15px;
+		}
+
+		#whiteBoard {
+			position: absolute;
+			left: 500px;
+			top: 500px;
+			height: 100px;
+			width: 100px;
+			background-color: cyan;
+			color: white;
+			font-size: 20px;
+		}
+
+		#loginTitle {
+			position: absolute;
+			left: 1000px;
+			top: 200px;
+			font-size: 25px;
+		}
+
+		#account {
+			position: absolute;
+			left: 890px;
+			top: 250px;
+			font-size: 20px;
+		}
+
+		#password {
+			position: absolute;
+			left: 890px;
+			top: 300px;
+			font-size: 20px;
+		}
+
+		#loginButton {
+			position: absolute;
+			left: 995px;
+			top: 360px;
+			font-size: 20px;
+			height: 30px;
+			width: 70px;
+		}
+	</style>
+</head>
+
+<body>
+	<p id=title>中国大逊人协会</p>
+	<p id=sign>我们的会标：<br><img src=img/sign.png></p>
+	<input id=search value=中国大逊人协会 readonly>
+	<input id=searchButton value=百度一下 readonly type="submit">
+	<p id=mouse><img src="img/mouse.png"></p>
+	<button id=music onclick="alert('因为程序员太逊了，所以没有做！')">逊音乐</button>
+	<button id=news onclick="alert('因为程序员太逊了，所以没有做！')">逊新闻</button>
+	<button id=game onclick="alert('因为程序员太逊了，所以没有做！')">逊游戏</button>
+	<button id=mcLuncher onclick="alert('在写了！在写了！')">逊我的世界<br>启动器<br>xmcl</button>
+	<button id=whiteBoard onclick="alert('在写了！在写了！')">逊白板</button>
+	<form name="input" action="javascript:login()">
+		<p id=loginTitle>登录</p>
+		<p id=account>账号：<input></p>
+		<p id=password>密码：<input></p>
+		<input id=loginButton type="submit" value="登录">
+	</form>
+	<script>
+		function login() {
+			document.getElementById('account').innerHTML = "账号：<input>"
+			document.getElementById('password').innerHTML = "密码：<input>"
+			alert('你不会真的以为登录了有什么用吧？')
+		}
+	</script>
+</body>
+
+</html>
