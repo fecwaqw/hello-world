@@ -1,0 +1,150 @@
+<head>
+    <title>一个很屑的fecwaqw的主页</title>
+    <script src="script/jquery.min.js"></script>
+    <script>
+        var view = null
+        $(document).ready(function() {
+            $("#website_collection").click(function() {
+                if (view != this) {
+                    $("ul.content_list").empty()
+                    $("ul.content_list").append('<li><a href="https://csacademy.com/app/graph_editor/">图论画图编辑器</a></li>')
+                    $("ul.content_list").append('<li><a href="https://generals.io/">generals</a></li>')
+                    $("ul.content_list").append('<li><a href="http://flash.7k7k.com/cms/cms10/20191112/1747326568/1/gameIndex.html">森林冰火人</a></li>')
+                    $("ul.content_list").append('<li><a href="http://minesweeper.cn/">扫雷</a></li>')
+                    $("ul.content_list").append('<li><a href="https://classic.minecraft.net">minecraft clasic</a></li>')
+                    $("ul.content_list").append('<li><a href="https://ev.io">ev</a></li>')
+                    $("ul.content_list").append('<li></li>')
+                    view = this
+                } else {
+                    $("ul.content_list").empty()
+                    view = null
+                }
+            })
+            $("#code").click(function() {
+                if (view != this) {
+                    $("ul.content_list").empty()
+                    $("ul.content_list").append('<li><a href="log2.html">log2计算器</a></li>')
+                    $("ul.content_list").append('<li><a href="壁纸收藏/index.html">壁纸收藏</a></li>')
+                    $("ul.content_list").append('<li><a href="xun/index.html">很逊的网站</a></li>')
+                    view = this
+                } else {
+                    $("ul.content_list").empty()
+                    view = null
+                }
+            })
+        });
+    </script>
+    <style>
+        body {
+            background-image: url("img/background.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        div.cover_color {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        div.select_bar {
+            position: absolute;
+            background-color: rgb(23, 147, 209);
+            width: 100%;
+            height: 6rem;
+            padding-left: .75rem;
+        }
+        
+        div.select_bar a.logo {
+            position: absolute;
+            width: 5rem;
+            height: 5rem;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            align-items: center;
+            border-radius: 100%;
+            background-image: url("img/logo.png");
+            background-size: cover;
+            background-position: center;
+            outline-style: solid;
+            outline-width: 0.1srem;
+            outline-color: rgb(51, 51, 51);
+        }
+        
+        ul.button_bar {
+            list-style-type: none;
+            margin-left: 6rem;
+            overflow: hidden;
+            background-color: rgb(51, 51, 51);
+        }
+        
+        ul.button_bar>li {
+            float: left;
+        }
+        
+        ul.button_bar>li>a {
+            display: block;
+            color: white;
+            padding: 2.25rem 3rem
+        }
+        
+        ul.button_bar>li>a:hover {
+            background-color: rgb(30, 30, 30);
+        }
+        
+        ul.content_list {
+            padding-top: 7rem;
+            padding-left: 3rem;
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+            list-style-type: none;
+        }
+        
+        ul.content_list>li {
+            margin-top: 1rem;
+        }
+        
+        ul.content_list>li>a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+            width: 20rem;
+            opacity: 1.0;
+            background-color: rgb(43, 43, 43);
+            border-radius: 0.5rem;
+            outline-style: solid;
+        }
+        
+        ul.content_list>li>a:hover {
+            color: rgb(250, 107, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cover_color">
+        <div class="content">
+            <ul class="content_list">
+            </ul>
+        </div>
+    </div>
+    <div class="select_bar">
+        <a href="index.html" class="logo"></a>
+        <ul class="button_bar">
+            <li><a id="website_collection">网站收藏</a></li>
+            <li><a id="code">编程作品</a></li>
+        </ul>
+    </div>
+</body>
