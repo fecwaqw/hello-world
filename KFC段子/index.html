@@ -1,0 +1,36 @@
+<head>
+    <title>KFC疯狂星期四段子</title>
+    <script src="../script/jquery.min.js"></script>
+    <script>
+        function randint(minNum, maxNum) {
+            switch (arguments.length) {
+                case 1:
+                    return parseInt(Math.random() * minNum + 1, 10);
+                    break;
+                case 2:
+                    return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p></p>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "kfc.json",
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    $("p").text(data[randint(1, data.length)]["text"])
+                }
+            })
+        })
+
+    </script>
+</body>
