@@ -18,14 +18,50 @@
             }
         }
     </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        div.content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1px;
+            border-style: solid;
+            border-color: black;
+            background-color: cyan;
+            color: white;
+            font-weight: 1px;
+            padding: 2px;
+            font-style: italic;
+        }
+
+        span#busuanzi_container_page_pv {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: darkgray;
+            font-size: .5px;
+        }
+    </style>
 </head>
 
 <body>
-    <article class="entry heti">
-        <p>Loading...</p>
+    <div class="content">
+        <article class="entry heti">
+            <p>Loading...</p>
+        </article>
+    </div>
 
-        感谢原项目:https://github.com/whitescent/KFC-Crazy-Thursday
-    </article>
     <span id="busuanzi_container_page_pv">
         这里被<span id="busuanzi_value_page_pv"></span>个闲人访问过
     </span>
