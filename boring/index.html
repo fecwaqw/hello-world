@@ -1,0 +1,68 @@
+<head>
+    <title>解决当下网民无聊现状的网站</title>
+    <script src="../script/jquery.min.js"></script>
+    <script>
+        var click_count = 0
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        div.button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1px;
+            border-style: solid;
+            border-color: black;
+            background-color: cyan;
+            color: white;
+            font-weight: 1px;
+            padding: 2px;
+            font-style: italic;
+        }
+
+        div.content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1px;
+            border-style: solid;
+            border-color: black;
+            background-color: white;
+            color: black;
+            font-weight: 1px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        无聊就点我呗～～
+    </div>
+    <div class="content">
+        <p></p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('div.button').click(function(){
+                click_count++;
+                if(click_count == 1){
+                    $('p').text('好的，我知道你很无聊')
+                }
+                else{
+                    $('div.content').text($('p').text() + '.')
+                }
+            });
+        })
+    </script>
+</body>
