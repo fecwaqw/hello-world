@@ -17,7 +17,7 @@
 
         div.button {
             position: absolute;
-            top: 50%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 1px;
@@ -32,7 +32,7 @@
 
         div.content {
             position: absolute;
-            top: 50%;
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 1px;
@@ -49,18 +49,16 @@
     <div class="button">
         无聊就点我呗～～
     </div>
-    <div class="content">
-        <p></p>
-    </div>
     <script>
         $(document).ready(function () {
             $('div.button').click(function(){
                 click_count++;
                 if(click_count == 1){
-                    $('p').text('好的，我知道你很无聊')
+                    $('body').append('<div class="content"></div>')
+                    $('div.content').text('好的，我知道你很无聊')
                 }
                 else{
-                    $('div.content').text($('p').text() + '.')
+                    $('div.content').text($('div.content').text() + '.')
                 }
             });
         })
