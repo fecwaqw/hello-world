@@ -17,7 +17,7 @@
 
         div.button {
             position: absolute;
-            top: 30%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 1px;
@@ -32,7 +32,7 @@
 
         div.content {
             position: absolute;
-            top: 70%;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 1px;
@@ -53,12 +53,40 @@
         $(document).ready(function () {
             $('div.button').click(function(){
                 click_count++;
-                if(click_count == 1){
-                    $('body').append('<div class="content"></div>')
-                    $('div.content').text('好的，我知道你很无聊')
-                }
-                else{
-                    $('div.content').text($('div.content').text() + '.')
+                switch(click_count){
+                    case 1:
+                        $('body').append('<div class="content"></div>')
+                        $('div.content').text('好的，我知道你很无聊')
+                        break
+                    case 2:
+                        $('div.content').text('那你就无聊着呗')
+                        break
+                    case 3:
+                        $('div.content').text('你觉得我会有什么办法吗')
+                        break
+                    case 4:
+                        $('div.content').text('还点啊...')
+                        break
+                    case 5:
+                        $('div.content').text('那你就看着下面这个"."继续无聊吧')
+                        break
+                    case 6:
+                        $('div.content').text('.')
+                        break
+                    case 20:
+                        $('div.content').text('闲不死你！')
+                        break
+                    case 100:
+                        $('div.content').text('有毅力啊，小伙子')
+                        break
+                    case 114:
+                        $('div.content').text('有毅力啊，很有毅力（赞许）')
+                        break
+                    case 114514:
+                        $('div.content').text('你的手还好吗，应该已经臭掉了罢，毕竟你已经点了114514下了')
+                        break
+                    default:
+                        $('div.content').text($('div.content').text() + '.')
                 }
             });
         })
