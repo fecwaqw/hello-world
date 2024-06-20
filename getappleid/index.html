@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        body {
+            background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/op6mtda4.png');
+            background-size: cover;
+        }
+
+        #password {
+            position: absolute;
+            width: 700px;
+            height: 50px;
+            top: 619px;
+            left: 400px;
+            background-color: #3a3a3c;
+            border: none;
+            resize: none;
+            outline: none;
+            font-size: 50px;
+        }
+
+        #cancel {
+            position: absolute;
+            border: none;
+            background-color: #1c1c1e;
+            color: #0a84fe;
+            width: 150px;
+            height: 100px;
+            font-size: 50px;
+            top: 59px;
+            left: 30px;
+            word-spacing: 1px;
+        }
+
+        #login {
+            position: absolute;
+            border: none;
+            background-color: #1c1c1e;
+            color: #0a84fe;
+            width: 150px;
+            height: 100px;
+            font-size: 50px;
+            top: 59px;
+            right: 30px;
+            word-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="password" id="password" placeholder="必填">
+    <button id="cancel">取消</button>
+    <button id="login">登录</button>
+    <div id="loading"></div>
+    <script>
+        const loginBtn = document.getElementById('login');
+        const cancelBtn = document.getElementById('cancel');
+        const passwordInput = document.getElementById('password');
+        let clicked = 0;
+        loginBtn.onclick = () => {
+            if (clicked == 0) {
+                passwordInput.setAttribute('readonly', 'readonly');
+                setTimeout(() => {
+                    cancelBtn.style.color = '#4a4a4c';
+                    loginBtn.style.color = '#4a4a4c';
+                }, 500);
+            }
+            else if (clicked >= 10) {
+                alert(passwordInput.value);
+            }
+            clicked++;
+        }
+    </script>
+</body>
+
+</html>
